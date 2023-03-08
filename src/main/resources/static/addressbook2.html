@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .error{
+            color: red;
+        }
+
+        .background{
+            color: pink;
+        }
+    </style>
+    <title>Address Book</title>
+</head>
+<body class="background">
+
+    <h1>Your contact information</h1>
+
+    <form action="#"
+    data-th-action="@{/contact}"
+    data-th-object="${XXXX}"
+    method = "POST">
+
+        <label>Name</label>
+        <input type ="text" th:field="*{name}"/>
+        <br/>
+
+        <label>Email</label>
+        <input type ="text" th:field="*{email}"/>
+        <br/>
+
+        <label>Phone Number</label>
+        <input type ="text" th:field="*{phoneNumber}"/>
+        <br/>
+
+        <label>Date of Birth</label>
+        <input type ="date" th:field="*{dateOfBirth}"/>
+        <br/>
+
+        <input type = "submit" value="Submit"/>
+
+    </form>
+    
+</body>
+</html>
